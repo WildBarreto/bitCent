@@ -3,7 +3,7 @@ import { TipoTransacao } from "./TipoTransacao";
 export default interface Transacao {
   id?: string;
   descricao: string;
-  valor: number;
   data: Date;
+  valor: number;
   tipo: TipoTransacao;
 }
