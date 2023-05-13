@@ -15,7 +15,7 @@ interface FormularioProps {
 }
 
 export default function Formulario(props: FormularioProps) {
-  const { dados, alterarDados, alterarAtributo } = useFormulario(
+  const { dados, alterarDados, alterarAtributo } = useFormulario<Transacao>(
     props.transacao
   );
 
@@ -45,10 +45,7 @@ export default function Formulario(props: FormularioProps) {
           valueFormat="DD/MM/YYYY"
           onChange={alterarAtributo("data")}
         />
-        <Radio.Group
-          value={dados.tipo}
-          onChange={alterarAtributo("tipo")}
-        >
+        <Radio.Group value={dados.tipo} onChange={alterarAtributo("tipo")}>
           <Group>
             <Radio value={TipoTransacao.RECEITA} label="Receita" />
             <Radio value={TipoTransacao.DESPESA} label="Despesa" />
