@@ -1,14 +1,14 @@
 //import AutenticacaoContext from '@/data/context/AutenticacaoContext'
 //import { useContext } from 'react'
-
-import usuarioFalso from "../../data/constantes/usuarioFalso";
+import AutenticacaoContext from "@/data/context/AutenticacaoContext";
+import { useContext } from "react";
 
 export default function BoasVindas() {
-  const usuario = usuarioFalso;
+  const { usuario } = useContext(AutenticacaoContext);
 
   function renderizarNome() {
     return (
-      <span className="hidden sm:inline">{usuario?.nome?.split(' ')[0]}</span>
+      <span className="hidden sm:inline">{usuario?.nome?.split(" ")[0]}</span>
     );
   }
 

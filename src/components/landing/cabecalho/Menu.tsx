@@ -1,11 +1,11 @@
 import { IconBrandGoogle } from "@tabler/icons-react";
 import MenuItem from "./MenuItem";
+import { useContext } from "react";
+import AutenticacaoContext from "@/data/context/AutenticacaoContext";
 
 export default function Menu() {
 
-  function loginGoogle() {
-    console.log("Login Google");
-  }
+ const {loginGoogle} = useContext(AutenticacaoContext)
 
   return (
     <div className="flex gap-2">
